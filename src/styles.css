@@ -1,0 +1,38 @@
+body {
+  --gap: 1rem;
+  font-family: monospace;
+  margin: var(--gap);
+}
+
+.container {
+  display: grid;
+  gap: var(--gap);
+  grid-template:
+    'pagination' auto
+    'all' auto
+    'list' auto
+    'output' auto / auto;
+}
+
+.pagination {
+  grid-area: pagination;
+}
+
+.all {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  grid-area: all;
+}
+
+.list {
+  grid-area: list;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.output {
+  grid-area: output;
+  margin: 0;
+}
